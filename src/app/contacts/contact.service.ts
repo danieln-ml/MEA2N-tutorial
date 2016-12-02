@@ -14,5 +14,4 @@ export class ContactService {
   getContacts(): Promise<Contact[]> {
     return Promise.resolve(CONTACTS);
   }
-
 }
