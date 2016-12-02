@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-import {Http, Response} from '@angular/http';
 import { Contact } from '../contact';
 import { ContactService } from '../contact.service';
 
@@ -13,10 +11,7 @@ import { ContactService } from '../contact.service';
 })
 export class ContactListComponent implements OnInit {
 
-  title: 'Contacts List'
   contacts: Contact[]
-  selectedContact: Contact
-  loaded: boolean
 
   constructor (private contactService: ContactService) {}
 
@@ -25,5 +20,4 @@ export class ContactListComponent implements OnInit {
       this.contacts = contacts
     });
   }
-
 }

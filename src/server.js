@@ -8,7 +8,8 @@ var apiRouter = express.Router();
 var CONTACTS_COLLECTION = "contacts";
 
 var app = express();
-app.use(express.static(__dirname + "/../dist"));
+var distDir = __dirname + "/../dist";
+app.use(express.static(distDir));
 app.use(bodyParser.json());
 
 // Create a database variable outside of the database connection callback to
