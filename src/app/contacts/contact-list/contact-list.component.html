@@ -1,6 +1,10 @@
 <ul class="list-group">
   <li class="list-group-item"
-    *ngFor="let contact of contacts">
+    *ngFor="let contact of contacts"
+    (click)="selectContact(contact)">
     {{contact.name}}
   </li>
 </ul>
+<contact-detail
+  [contact]="selectedContact">
+</contact-detail>
